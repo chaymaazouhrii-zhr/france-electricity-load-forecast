@@ -1,0 +1,28 @@
+dates:
+  train_start: "2019-01-01"
+  test_start: "2023-01-01"
+
+forecast:
+  timezone: "Europe/Paris"
+  issue_hour: 10
+
+# Poids approximatifs, fondés sur la population des grandes régions.
+cities:
+  - {name: lille, dep: "59", lat: 50.63, lon: 3.07, weight: 0.10}
+  - {name: paris, dep: "75", lat: 48.86, lon: 2.35, weight: 0.25}
+  - {name: strasbourg, dep: "67", lat: 48.58, lon: 7.75, weight: 0.10}
+  - {name: rennes, dep: "35", lat: 48.11, lon: -1.68, weight: 0.07}
+  - {name: nantes, dep: "44", lat: 47.22, lon: -1.55, weight: 0.08}
+  - {name: bordeaux, dep: "33", lat: 44.84, lon: -0.58, weight: 0.10}
+  - {name: toulouse, dep: "31", lat: 43.60, lon: 1.44, weight: 0.10}
+  - {name: lyon, dep: "69", lat: 45.76, lon: 4.84, weight: 0.13}
+  - {name: marseille, dep: "13", lat: 43.30, lon: 5.37, weight: 0.05}
+  - {name: nice, dep: "06", lat: 43.70, lon: 7.27, weight: 0.02}
+
+model:
+  n_estimators: 600
+  learning_rate: 0.05
+  max_depth: 6
+  subsample: 0.8
+  colsample_bytree: 0.8
+  random_state: 42
